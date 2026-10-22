@@ -248,3 +248,157 @@
     กรุณาตรวจสอบข้อมูลและเงื่อนไขของแต่ละบริการก่อนใช้งาน
   </div>
 </div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เครื่องมือสุ่มตัวเลข</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px 15px;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 15px;
+  border: 1px solid #e5e9f0;
+  box-shadow: 0 4px 15px rgba(0,0,0,.04);
+}
+
+.card h2 {
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #eef4ff;
+  color: #175bd5;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 9px;
+  background: #1764e8;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+}
+
+button:hover {
+  background: #104fc0;
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #888;
+}
+
+@media (max-width: 400px) {
+  h1 { font-size: 23px; }
+  .card { padding: 15px; }
+  .number { font-size: 32px; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>เครื่องมือสุ่มตัวเลข</h1>
+  <p class="subtitle">เลือกจำนวนหลัก แล้วกดปุ่มเพื่อสุ่มเลข</p>
+
+  <div class="card">
+    <h2>สุ่มเลข 1 หลัก</h2>
+    <div class="number" id="num1">0</div>
+    <button onclick="generate(1)">สุ่มเลข 1 หลัก</button>
+  </div>
+
+  <div class="card">
+    <h2>สุ่มเลข 2 หลัก</h2>
+    <div class="number" id="num2">00</div>
+    <button onclick="generate(2)">สุ่มเลข 2 หลัก</button>
+  </div>
+
+  <div class="card">
+    <h2>สุ่มเลข 3 หลัก</h2>
+    <div class="number" id="num3">000</div>
+    <button onclick="generate(3)">สุ่มเลข 3 หลัก</button>
+  </div>
+
+  <div class="card">
+    <h2>สุ่มเลข 6 หลัก</h2>
+    <div class="number" id="num6">000000</div>
+    <button onclick="generate(6)">สุ่มเลข 6 หลัก</button>
+  </div>
+
+  <div class="footer">
+    เครื่องมือสุ่มตัวเลขออนไลน์
+  </div>
+</div>
+
+<script>
+function generate(digits) {
+  let result = "";
+
+  for (let i = 0; i < digits; i++) {
+    result += Math.floor(Math.random() * 10);
+  }
+
+  document.getElementById("num" + digits).textContent = result;
+}
+</script>
+</body>
+</html>
+
