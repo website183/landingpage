@@ -1,392 +1,479 @@
 
-<div class="rr-landing">
-  <style>
-    .rr-landing {
-      --green: #123d26;
-      --gold: #d8b75c;
-      --cream: #fff9e9;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-      color: #202820;
-      font-family: inherit;
-      box-sizing: border-box;
-    }
-
-    .rr-landing *,
-    .rr-landing *::before,
-    .rr-landing *::after {
-      box-sizing: border-box;
-    }
-
-    .rr-hero {
-      overflow: hidden;
-      border-radius: 18px;
-      border: 1px solid #e4d6a6;
-      background: var(--green);
-      box-shadow: 0 8px 24px rgba(15, 48, 28, .12);
-    }
-
-    .rr-hero img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0;
-    }
-
-    .rr-intro {
-      text-align: center;
-      padding: 28px 12px 20px;
-    }
-
-    .rr-intro h1 {
-      margin: 0 0 8px;
-      color: var(--green);
-      font-size: clamp(23px, 4vw, 30px);
-      font-weight: 800;
-      line-height: 1.4;
-    }
-
-    .rr-intro p {
-      margin: 0;
-      color: #6d746d;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .rr-menu {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      max-width: 560px;
-      margin: 8px auto 0;
-    }
-
-    .rr-menu-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-height: 84px;
-      padding: 15px 18px;
-      border: 1px solid #e6dfca;
-      border-radius: 15px;
-      background: #fff;
-      color: #25352a !important;
-      text-decoration: none !important;
-      box-shadow: 0 3px 12px rgba(20, 45, 28, .045);
-      transition: transform .2s ease, border-color .2s ease,
-                  box-shadow .2s ease;
-    }
-
-    .rr-menu-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--gold);
-      box-shadow: 0 8px 22px rgba(20, 55, 32, .11);
-    }
-
-    .rr-menu-logo {
-      display: flex;
-      flex: 0 0 52px;
-      width: 52px;
-      height: 52px;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 50%;
-      background: #f5f0df;
-      border: 1px solid #e7d49a;
-    }
-
-    .rr-menu-logo img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      margin: 0;
-    }
-
-    .rr-menu-emoji {
-      font-size: 29px;
-      line-height: 1;
-    }
-
-    .rr-menu-text {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .rr-menu-title {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 17px;
-      font-weight: 800;
-      line-height: 1.5;
-    }
-
-    .rr-menu-subtitle {
-      display: block;
-      color: #7a8079;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 1.6;
-    }
-
-    .rr-menu-arrow {
-      color: #b08c32;
-      font-size: 25px;
-      font-weight: 500;
-      transition: transform .2s ease;
-    }
-
-    .rr-menu-card:hover .rr-menu-arrow {
-      transform: translateX(4px);
-    }
-
-    .rr-footer {
-      margin-top: 25px;
-      text-align: center;
-      color: #959991;
-      font-size: 12px;
-      line-height: 1.8;
-    }
-
-    @media (max-width: 480px) {
-      .rr-landing {
-        padding: 14px 12px 28px;
-      }
-
-      .rr-hero {
-        border-radius: 13px;
-      }
-
-      .rr-intro {
-        padding: 23px 6px 17px;
-      }
-
-      .rr-menu-card {
-        min-height: 78px;
-        padding: 13px;
-        gap: 12px;
-      }
-
-      .rr-menu-logo {
-        flex-basis: 46px;
-        width: 46px;
-        height: 46px;
-      }
-
-      .rr-menu-title {
-        font-size: 15px;
-      }
-
-      .rr-menu-subtitle {
-        font-size: 12px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .rr-menu-card,
-      .rr-menu-arrow {
-        transition: none;
-      }
-    }
-  </style>
-
-  <!-- HERO -->
-  <div class="rr-hero">
-    <img
-      src="https://green-swan-332466.hostingersite.com/wp-content/uploads/2026/10/e230e8fd-8d6a-4ff0-9e54-0f20e617e87f.webp"
-      alt="RUAYRAEW ติดตามกลุ่มหวย"
-      fetchpriority="high">
-  </div>
-
-  <!-- INTRO -->
-  <header class="rr-intro">
-    <h1>เลือกเมนูที่ต้องการ</h1>
-    <p>เข้าถึงบริการและข้อมูลที่คุณสนใจได้จากเมนูด้านล่าง</p>
-  </header>
-
-  <!-- MENU -->
-  <nav class="rr-menu" aria-label="เมนูหลัก">
-
-    <!-- MENU 1: RUAYRAEW -->
-    <a class="rr-menu-card"
-       href="https://YOUR-RUAYRAEW-URL.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="rr-menu-logo">
-        <img
-          src="https://green-swan-332466.hostingersite.com/wp-content/uploads/2026/10/logorr.webp"
-          alt="RUAYRAEW"
-          loading="lazy">
-      </span>
-      <span class="rr-menu-text">
-        <span class="rr-menu-title">ซื้อหวยออนไลน์ Ruayraew</span>
-        <span class="rr-menu-subtitle">เข้าสู่เว็บไซต์ RUAYRAEW</span>
-      </span>
-      <span class="rr-menu-arrow" aria-hidden="true">›</span>
-    </a>
-
-    <!-- MENU 2: HINT GROUP -->
-    <a class="rr-menu-card"
-       href="https://YOUR-HUAY-GROUP-URL.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="rr-menu-logo">
-        <span class="rr-menu-emoji" aria-hidden="true">🔮</span>
-      </span>
-      <span class="rr-menu-text">
-        <span class="rr-menu-title">กลุ่มใบ้หวย</span>
-        <span class="rr-menu-subtitle">ดูรายละเอียดและติดตามกลุ่ม</span>
-      </span>
-      <span class="rr-menu-arrow" aria-hidden="true">›</span>
-    </a>
-
-  </nav>
-
-  <div class="rr-footer">
-    กรุณาตรวจสอบข้อมูลและเงื่อนไขของแต่ละบริการก่อนใช้งาน
-  </div>
-</div>
-
-
-
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>เครื่องมือสุ่มตัวเลข</title>
+<meta name="theme-color" content="#f1f4f8">
+<title>RUAYRAEW | เลือกเมนูและเครื่องมือสุ่มตัวเลข</title>
+<meta name="description" content="เลือกเมนู RUAYRAEW ติดตามกลุ่มหวย และทดลองใช้เครื่องมือสุ่มตัวเลขออนไลน์">
 <style>
+:root {
+  --green: #123d26;
+  --green-light: #176536;
+  --gold: #d8b75c;
+  --blue: #1764e8;
+  --page-bg: #f1f4f8;
+  --text: #202820;
+  --muted: #747c82;
+}
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding: 25px 15px;
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #222;
+  padding: 30px 16px;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Arial, Tahoma, sans-serif;
+  line-height: 1.6;
 }
 
-.container {
+/* กล่องหลักครอบทุกส่วน */
+.page-shell {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px 24px 40px;
+  background: #fff;
+  border: 1px solid #e4e9f0;
+  border-radius: 22px;
+  box-shadow:
+    0 12px 35px rgba(31, 48, 71, .08),
+    0 2px 8px rgba(31, 48, 71, .04);
+}
+
+/* =========================
+   LANDING PAGE
+========================= */
+.rr-landing {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 8px 8px 24px;
+}
+
+.rr-hero {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #e4d6a6;
+  background: var(--green);
+  box-shadow: 0 8px 24px rgba(15, 48, 28, .12);
+}
+
+.rr-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.rr-intro {
+  text-align: center;
+  padding: 28px 12px 20px;
+}
+
+.rr-intro h1 {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: clamp(23px, 4vw, 30px);
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.rr-intro p {
+  margin: 0;
+  color: #6d746d;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.rr-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  max-width: 560px;
+  margin: 8px auto 0;
+}
+
+.rr-menu-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 84px;
+  padding: 15px 18px;
+  border: 1px solid #e6dfca;
+  border-radius: 15px;
+  background: #fff;
+  color: #25352a;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(20, 45, 28, .045);
+  transition: transform .2s ease, border-color .2s ease,
+              box-shadow .2s ease;
+}
+
+.rr-menu-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 8px 22px rgba(20, 55, 32, .11);
+}
+
+.rr-menu-logo {
+  display: flex;
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f5f0df;
+  border: 1px solid #e7d49a;
+}
+
+.rr-menu-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: 0;
+}
+
+.rr-menu-emoji {
+  font-size: 29px;
+  line-height: 1;
+}
+
+.rr-menu-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.rr-menu-title {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.rr-menu-subtitle {
+  display: block;
+  color: #7a8079;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.rr-menu-arrow {
+  color: #b08c32;
+  font-size: 25px;
+  font-weight: 500;
+  transition: transform .2s ease;
+}
+
+.rr-menu-card:hover .rr-menu-arrow {
+  transform: translateX(4px);
+}
+
+.rr-footer {
+  margin-top: 25px;
+  text-align: center;
+  color: #959991;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================
+   RANDOM NUMBER TOOL
+========================= */
+.random-section {
+  width: 100%;
   max-width: 650px;
-  margin: auto;
+  margin: 12px auto 0;
+  padding: 18px 0 0;
+  border-top: 1px solid #edf0f4;
 }
 
-h1 {
+.random-heading {
   text-align: center;
-  font-size: 27px;
-  margin-bottom: 8px;
+  margin: 0 0 24px;
 }
 
-.subtitle {
-  text-align: center;
-  color: #666;
-  margin-bottom: 28px;
+.random-heading h2 {
+  margin: 0 0 8px;
+  color: #202820;
+  font-size: clamp(22px, 4vw, 27px);
+  line-height: 1.5;
+}
+
+.random-heading p {
+  margin: 0;
+  color: #6d746d;
   font-size: 14px;
 }
 
-.card {
-  background: #fff;
-  padding: 20px;
+.random-card {
+  padding: 18px;
   margin-bottom: 16px;
-  border-radius: 15px;
-  border: 1px solid #e5e9f0;
-  box-shadow: 0 4px 15px rgba(0,0,0,.04);
+  border-radius: 14px;
+  border: 1px solid #e3e9f2;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(30, 50, 80, .06);
 }
 
-.card h2 {
-  margin: 0 0 15px;
-  font-size: 18px;
+.random-card h3 {
+  margin: 0 0 12px;
+  color: #27332b;
+  font-size: 17px;
+  font-weight: 700;
 }
 
-.number {
+.random-number {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 75px;
-  margin-bottom: 15px;
+  min-height: 68px;
+  margin-bottom: 13px;
+  padding: 10px;
   border-radius: 10px;
   background: #eef4ff;
   color: #175bd5;
-  font-size: 38px;
+  font-size: clamp(30px, 6vw, 38px);
   font-weight: 800;
   letter-spacing: 5px;
   font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
 }
 
-button {
+.random-button {
+  display: block;
   width: 100%;
-  padding: 12px;
-  border: none;
+  min-height: 44px;
+  padding: 12px 16px;
+  border: 0;
   border-radius: 9px;
-  background: #1764e8;
+  background: var(--blue);
   color: #fff;
+  font-family: inherit;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
-  transition: background .2s, transform .1s;
+  transition: background .2s ease, transform .1s ease;
 }
 
-button:hover {
+.random-button:hover {
   background: #104fc0;
 }
 
-button:active {
-  transform: scale(.98);
+.random-button:active {
+  transform: scale(.985);
 }
 
-.footer {
-  text-align: center;
-  margin-top: 25px;
+.random-button:focus-visible,
+.rr-menu-card:focus-visible {
+  outline: 3px solid #7ca8ff;
+  outline-offset: 3px;
+}
+
+.random-footer {
+  margin-top: 22px;
+  color: #9299a0;
   font-size: 12px;
-  color: #888;
+  text-align: center;
 }
 
-@media (max-width: 400px) {
-  h1 { font-size: 23px; }
-  .card { padding: 15px; }
-  .number { font-size: 32px; }
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .page-shell {
+    padding: 12px 9px 25px;
+    border-radius: 16px;
+  }
+
+  .rr-landing {
+    padding: 4px 2px 22px;
+  }
+
+  .rr-hero {
+    border-radius: 13px;
+  }
+
+  .rr-intro {
+    padding: 23px 6px 17px;
+  }
+
+  .rr-menu-card {
+    min-height: 76px;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .rr-menu-logo {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .rr-menu-title {
+    font-size: 15px;
+  }
+
+  .rr-menu-subtitle {
+    font-size: 12px;
+  }
+
+  .random-section {
+    margin-top: 8px;
+    padding-top: 22px;
+  }
+
+  .random-card {
+    padding: 14px;
+  }
+
+  .random-card h3 {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="container">
-  <h1>เครื่องมือสุ่มตัวเลข</h1>
-  <p class="subtitle">เลือกจำนวนหลัก แล้วกดปุ่มเพื่อสุ่มเลข</p>
+<main class="page-shell">
 
-  <div class="card">
-    <h2>สุ่มเลข 1 หลัก</h2>
-    <div class="number" id="num1">0</div>
-    <button onclick="generate(1)">สุ่มเลข 1 หลัก</button>
-  </div>
+  <!-- LANDING PAGE -->
+  <section class="rr-landing">
 
-  <div class="card">
-    <h2>สุ่มเลข 2 หลัก</h2>
-    <div class="number" id="num2">00</div>
-    <button onclick="generate(2)">สุ่มเลข 2 หลัก</button>
-  </div>
+    <div class="rr-hero">
+      <img
+        src="https://green-swan-332466.hostingersite.com/wp-content/uploads/2026/10/e230e8fd-8d6a-4ff0-9e54-0f20e617e87f.webp"
+        alt="RUAYRAEW ติดตามกลุ่มหวย"
+        fetchpriority="high">
+    </div>
 
-  <div class="card">
-    <h2>สุ่มเลข 3 หลัก</h2>
-    <div class="number" id="num3">000</div>
-    <button onclick="generate(3)">สุ่มเลข 3 หลัก</button>
-  </div>
+    <header class="rr-intro">
+      <h1>เลือกเมนูที่ต้องการ</h1>
+      <p>เข้าถึงบริการและข้อมูลที่คุณสนใจได้จากเมนูด้านล่าง</p>
+    </header>
 
-  <div class="card">
-    <h2>สุ่มเลข 6 หลัก</h2>
-    <div class="number" id="num6">000000</div>
-    <button onclick="generate(6)">สุ่มเลข 6 หลัก</button>
-  </div>
+    <nav class="rr-menu" aria-label="เมนูหลัก">
 
-  <div class="footer">
-    เครื่องมือสุ่มตัวเลขออนไลน์
-  </div>
-</div>
+      <!-- เมนู RUAYRAEW -->
+      <a
+        class="rr-menu-card"
+        href="https://YOUR-RUAYRAEW-URL.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <span class="rr-menu-logo">
+          <img
+            src="https://green-swan-332466.hostingersite.com/wp-content/uploads/2026/10/logorr.webp"
+            alt="RUAYRAEW"
+            loading="lazy">
+        </span>
+
+        <span class="rr-menu-text">
+          <span class="rr-menu-title">ซื้อหวยออนไลน์ Ruayraew</span>
+          <span class="rr-menu-subtitle">เข้าสู่เว็บไซต์ RUAYRAEW</span>
+        </span>
+
+        <span class="rr-menu-arrow" aria-hidden="true">›</span>
+      </a>
+
+      <!-- เมนูกลุ่มใบ้หวย -->
+      <a
+        class="rr-menu-card"
+        href="https://YOUR-HUAY-GROUP-URL.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <span class="rr-menu-logo">
+          <span class="rr-menu-emoji" aria-hidden="true">🔮</span>
+        </span>
+
+        <span class="rr-menu-text">
+          <span class="rr-menu-title">กลุ่มใบ้หวย</span>
+          <span class="rr-menu-subtitle">ดูรายละเอียดและติดตามกลุ่ม</span>
+        </span>
+
+        <span class="rr-menu-arrow" aria-hidden="true">›</span>
+      </a>
+
+    </nav>
+
+    <div class="rr-footer">
+      กรุณาตรวจสอบข้อมูลและเงื่อนไขของแต่ละบริการก่อนใช้งาน
+    </div>
+
+  </section>
+
+  <!-- RANDOM NUMBER TOOL -->
+  <section class="random-section" aria-labelledby="random-title">
+
+    <header class="random-heading">
+      <h2 id="random-title">เครื่องมือสุ่มตัวเลข</h2>
+      <p>เลือกจำนวนหลัก แล้วกดปุ่มเพื่อสุ่มเลข</p>
+    </header>
+
+    <div class="random-card">
+      <h3>สุ่มเลข 1 หลัก</h3>
+      <output class="random-number" id="num1" aria-live="polite">0</output>
+      <button class="random-button" type="button" onclick="generate(1)">
+        สุ่มเลข 1 หลัก
+      </button>
+    </div>
+
+    <div class="random-card">
+      <h3>สุ่มเลข 2 หลัก</h3>
+      <output class="random-number" id="num2" aria-live="polite">00</output>
+      <button class="random-button" type="button" onclick="generate(2)">
+        สุ่มเลข 2 หลัก
+      </button>
+    </div>
+
+    <div class="random-card">
+      <h3>สุ่มเลข 3 หลัก</h3>
+      <output class="random-number" id="num3" aria-live="polite">000</output>
+      <button class="random-button" type="button" onclick="generate(3)">
+        สุ่มเลข 3 หลัก
+      </button>
+    </div>
+
+    <div class="random-card">
+      <h3>สุ่มเลข 6 หลัก</h3>
+      <output class="random-number" id="num6" aria-live="polite">000000</output>
+      <button class="random-button" type="button" onclick="generate(6)">
+        สุ่มเลข 6 หลัก
+      </button>
+    </div>
+
+    <p class="random-footer">
+      ผลลัพธ์เป็นการสุ่มตัวเลขเพื่อความบันเทิง ไม่ใช่การทำนายผลรางวัล
+    </p>
+
+  </section>
+
+</main>
 
 <script>
 function generate(digits) {
@@ -396,9 +483,13 @@ function generate(digits) {
     result += Math.floor(Math.random() * 10);
   }
 
-  document.getElementById("num" + digits).textContent = result;
+  const output = document.getElementById("num" + digits);
+
+  if (output) {
+    output.textContent = result;
+  }
 }
 </script>
-</body>
-</html> 
 
+</body>
+</html>
